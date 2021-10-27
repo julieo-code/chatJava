@@ -1,2 +1,3 @@
-com\mycompany\chat\ChatClient.class
-com\mycompany\chat\ChatServer.class
+com\mycompany\chat\ClientSocket.class
+com\mycompany\chat\BlockingChatServerApp.class
+com\mycompany\chat\BlockingChatClientApp.class

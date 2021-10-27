@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class BlockingChatClientApp implements Runnable {
    
     public static final String SERVER_ADDRESS = "127.0.0.1";
-
     
     private final Scanner scanner;
     
@@ -47,6 +46,7 @@ public class BlockingChatClientApp implements Runnable {
     private void messageLoop() {
         String msg;
         do {
+            
             System.out.print("Digite uma msg (ou 'sair' para encerrar): ");
             msg = scanner.nextLine();
             clientSocket.sendMsg(msg);
@@ -57,7 +57,7 @@ public class BlockingChatClientApp implements Runnable {
     @Override
     public void run() {
         String msg;
-        while((msg = clientSocket.getMessage())!=null) {
+        while((msg = clientSocket.getMessage())!= null) {
             System.out.println("Servidor diz: " + msg);
         }
     }
